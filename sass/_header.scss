@@ -1,0 +1,105 @@
+header.pageHeader {
+    width: 100%;
+    height: 300px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 80px;
+
+    div.headerContent {
+        width: 100%;
+        height: 250px;
+        color: $headerTxtColor;
+        @extend %textShadow;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1.siteTitle {
+            margin: 0;
+            padding: 0;
+            font-size: 100px;
+            line-height: 1;
+        }
+
+        h2.siteDescription {
+            font-size: 14px;
+            font-weight: 300;
+            margin: 0.5em 0 0 0;
+            padding: 0;
+        }
+    }
+
+    nav.headerNav {
+        width: 100%;
+        height: 50px;
+        background-color: rgba(255, 255, 255, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        ul.headerNavLinks {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li.current-menu-item {
+                a {
+                    opacity: 1;
+                    
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        left: -2px;
+                        right: -2px;
+                        bottom: -5px;
+                        height: 2px;
+                        background-color: $headerLinkColor;
+                        opacity: 1;
+                        @include transform(translateY(0px));
+                    }
+                }
+            }
+    
+            li {
+                display: inline;
+                margin: 0 10px;
+    
+                a {
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: $headerLinkColor;
+                    font-size: 14px;
+                    letter-spacing: 0.05em;
+                    opacity: 0.7;
+                    position: relative;
+                    @include transition(opacity, 300ms);
+    
+                    &:hover {
+                        opacity: 1;
+    
+                        &:after {
+                            opacity: 1;
+                            @include transform(translateY(0px));
+                        }
+                    }
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        left: -2px;
+                        right: -2px;
+                        bottom: -5px;
+                        height: 2px;
+                        background-color: $headerLinkColor;
+                        opacity: 0;
+                        @include transition(opacity, 300ms);
+                        @include transition(transform, 300ms);
+                        @include transform(translateY(10px));
+                    }
+                }
+            }
+        }
+    }
+}

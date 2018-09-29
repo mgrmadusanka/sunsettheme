@@ -1,0 +1,244 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+
+    &.noScroll {
+        overflow-y: hidden;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover, &:focus {
+        text-decoration: none;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 7px 10px;
+    border: 1px solid;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+}
+
+.btnDefault {
+    color: #bbb;
+    background-color: transparent;
+    border-color: #bbb;
+    @include transition(all, 300ms);
+
+    &:hover {
+        color: #464646;
+        border-color: #464646;
+    }
+}
+    
+
+// common styles for all post types
+main.main {
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+    main.main {
+        width: 80%;
+    }
+}
+
+article {
+    padding-bottom: 80px;
+    padding-top: 20px;
+}
+
+h1.pageTitle {
+    color: $postTitleColor;
+    font-size: 48px;
+    font-weight: 300;
+    text-align: center;
+    margin: 0 0 50px 0;
+    padding: 0;
+    opacity: 1;
+}
+
+@media only screen and (min-width: 768px) {
+    h1.pageTitle {
+        font-size: 58px;
+    }
+}
+
+h2.postTitle {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    a {
+        display: inline-block;
+        color: $postTitleColor;
+        font-size: 38px;
+        font-weight: 300;
+        text-align: center;
+        margin: 0 0 20px 0;
+        padding: 0;
+        opacity: 1;
+        @include transition(color, 300ms);
+    
+        &:hover {
+            color: $postTitleHoverColor;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    h2.postTitle {
+        a {
+            font-size: 48px;
+        }
+    }
+}
+
+h2.postTitle {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: $postTitleColor;
+    font-size: 38px;
+    font-weight: 300;
+    text-align: center;
+    margin: 0 0 20px 0;
+    padding: 0;
+    opacity: 1;
+}
+
+@media only screen and (min-width: 768px) {
+    h2.postTitle {
+        font-size: 48px;
+    }
+}
+
+div.postMeta {
+    color: $postMetaColor;
+    text-align: center;
+
+    span {
+        font-size: 15px;
+        font-weight: 300;
+        color: $postMetaColor;
+    }
+
+    a {
+        font-size: 15px;
+        font-weight: 500;
+        color: $postMetaColor;
+        @include transition(color, 300ms);
+
+        &:hover {
+            color: $postMetaHoverColor
+        }
+    }
+}
+
+footer.postFooter {
+    margin: 30px 0 0 0;
+    padding: 0 0 5px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 2px solid #eee;
+
+    div.postTags {
+        a {
+            margin-right: 5px;
+        }
+    }
+
+    span.sunset-icon {
+        margin-right: 10px;
+        font-size: 13px;
+        color: $postMetaColor;
+    }
+
+    a {
+        font-size: 14px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $postMetaColor;
+        @include transition(color, 300ms);
+
+        &:hover {
+            color: $postMetaHoverColor;
+        }
+    }
+}
+
+div.primaryContainer {
+    main.main {
+        nav.pagination {
+            margin-bottom: 50px;
+            width: unset;
+            display: inline-block;
+
+            div.nav-links {
+                margin: 0;
+                padding: 5px;
+                border: 1px solid #ced4da;
+                border-radius: 4px;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                -ms-border-radius: 4px;
+                -o-border-radius: 4px;
+
+                span {
+                    margin: 0;
+                    padding: 5px;
+                    border-right: 1px solid #ced4da;
+
+                    &:last-child {
+                        border: none;
+                    }
+                }
+
+                a {
+                    margin: 0;
+                    padding: 5px;
+                    border-right: 1px solid #ced4da;
+
+                    &:last-child {
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer.pageFooter {
+    width: 100%;
+    padding: 50px;
+    background-color: #111;
+
+    p.footerCredit {
+        text-align: center;
+        color: #fff;
+        font-weight: 300;
+    }
+}

@@ -1,0 +1,259 @@
+a.sidebarOpen {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: #fff;
+    @include transition(color, 300ms);
+
+    &:hover {
+        color: $postTitleHoverColor;
+    }
+}
+
+div.sunsetSidebar {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1f1f1f;
+    color: #fff;
+    width: 100%;
+    max-width: 280px;
+    height: 100vh;
+    @include transition(transform, 500ms);
+
+    &.sidebarClosed {
+        @include transform(translateX(100%));
+    }
+
+    div.sunsetSidebarContainer {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100vh;
+        padding-top: 40px;
+
+        a.sidebarClose {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+            color: #fff;
+            @include transition(color, 300ms);
+
+            &:hover {
+                color: $postTitleHoverColor;
+            }
+        }
+
+        div.sidebarScroll {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: scroll;
+
+            aside#sunsetRightSidebar {
+                section.sunsetWidget  {
+                    padding: 20px;
+
+                    h2.sunsetWidgetTitle {
+                        font-size: 18px;
+                        font-weight: 300;
+                        letter-spacing: 0.02em;
+                        text-align: center;
+                        padding: 5px;
+                        background-color: rgba(255 , 255, 255, 0.1);
+                        border-radius: 20px;
+                    }
+
+                    ul {
+                        list-style: none;
+                        padding: 0 10px;
+
+                        li {
+                            margin: 10px 0;
+
+                            a {
+                                color: #fff;
+                                font-weight: 300;
+                                @include transition(color, 300ms);
+
+                                &:hover {
+                                    color: $postTitleHoverColor;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                section.sunsetProfileWidget {
+                    div.sunsetProPicContainer {
+                        div.sunsetProPicPrev {
+                            width: 150px;
+                            height: 150px;
+                            margin: 0 auto;
+                            background-position: center center;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    h2.sunsetAuthorName {
+                        text-align: center;
+                        font-size: 22px;
+                        font-weight: 400;
+                        margin-bottom: 0;
+                    }
+
+                    h3.sunsetDescription {
+                        text-align: center;
+                        font-size: 14px;
+                        font-weight: 300;
+                        margin-top: 0;
+                    }
+
+                    div.socialMedia {
+                        text-align: center;
+
+                        a {
+                            text-decoration: none;
+                            color: #fff;
+                            @include transition(color, 300ms);
+                            font-size: 24px;
+
+                            &:hover {
+                                color: $postTitleHoverColor;
+                            }
+                        }
+                    }
+
+                    hr {
+                        height: 1px;
+                        border: none;
+                        border-radius: 0.5px;
+                        background: rgba(255 , 255, 255, 0.1);
+                        margin-top: 40px;
+                    }
+                }
+
+                section.widget_tag_cloud {
+                    div.tagcloud {
+                        text-align: center;
+
+                        a {
+                            display: inline-block;
+                            color: #fff;
+                            text-decoration: none;
+                            font-weight: 300;
+                            letter-spacing: 0.02em;
+                            line-height: 1;
+                            background-color: rgba(255 , 255, 255, 0.1);
+                            padding: 5px 8px;
+                            margin: 3px 0;
+                            border-radius: 10px;
+                            @include transition(color, 300ms);
+
+                            &:hover {
+                                color: $postTitleHoverColor;
+                            }
+                        }
+                    }
+                }
+
+                section.widget_categories {
+                    ul {
+                        li.cat-item {
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            margin: 15px 0;
+
+                            span {
+                                position: absolute;
+                                right: 0;
+                                background-color: rgba(255 , 255, 255, 0.1);
+                                width: 25px;
+                                height: 25px;
+                                font-size: 16px;
+                                font-weight: 300;
+                                line-height: 1em;
+                                border-radius: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                        }
+                    }
+                }
+
+                section.widget_recent_comments {
+                    ul {
+                        li.recentcomments {
+                            border-bottom: 1px solid rgba(255 , 255, 255, 0.1);
+                            margin: 0;
+                            padding: 10px 0;
+                            font-size: 16px;
+
+                            &:last-child {
+                                border: none;
+                            }
+
+                            span.comment-author-link {
+                                text-transform: capitalize;
+                                display: block;
+                            }
+
+                            :not(span) {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+
+                section.sunset-popular-posts-widget {
+                    div.media {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 10px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        div.media-left {
+                            margin: 0 10px;
+                        }
+
+                        div.media-body {
+                            a {
+                                color: #fff;
+                                font-weight: 300;
+                                @include transition(color, 300ms);
+
+                                &:hover {
+                                    color: $postTitleHoverColor;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+div.sidebarOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 90;
+    background-color: rgba(0, 0, 0, 0.5);
+}

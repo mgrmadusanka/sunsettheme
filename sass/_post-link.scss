@@ -1,0 +1,26 @@
+article.sunsetLinkPostFormat {
+    header.postHeader {
+        div.link {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            span {
+                font-size: 30px;
+                color: #fff;
+                @include transition(color, 300ms);
+            }
+
+            &:hover {
+                span {
+                    color: $postTitleHoverColor;
+                }
+            }
+        }
+    }
+}

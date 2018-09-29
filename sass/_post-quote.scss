@@ -1,0 +1,38 @@
+article.sunsetQuotePostFormat {
+    header.postHeader {
+        max-width: 800px;
+        margin: 0 auto;
+
+        h2.quoteContent {
+            color: $postTitleColor;
+            display: block;
+            font-size: 38px;
+            font-weight: 300;
+            text-align: center;
+            margin: 0 0 20px 0;
+            padding: 0;
+            opacity: 1;
+        }
+
+        h3.quoteAuthor {
+            color: $postTitleColor;
+            display: block;
+            font-size: 14px;
+            font-weight: 300;
+            text-align: center;
+            margin: 0;
+            padding: 0 0 20px 0;
+            opacity: 0.5;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    article.sunsetQuotePostFormat {
+        header.postHeader {
+            h2.quoteContent {
+                font-size: 48px;
+            }
+        }
+    }
+}

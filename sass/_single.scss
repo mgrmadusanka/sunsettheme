@@ -1,0 +1,275 @@
+div.postVideo {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+div.postVideoContent {
+    width: 100%;
+
+    iframe {
+        height: 200px;
+        width: 100%;
+
+        @media (min-width: 768px) {
+            height: 500px;
+        }
+    }
+}
+
+div.postContentContainer {
+    div.postContent {
+        p {
+            font-size: 18px;
+            letter-spacing: 0.02em;
+            line-height: 1.6em;
+            color: #898989;
+            font-weight: 400;
+        }
+    }
+}
+
+div.sunsetShareThis {
+    border-top: 2px solid #eee;
+    margin-top: 50px;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+    @media (min-width: 768px) {
+        justify-content: unset;
+    }
+
+    h4 {
+        font-size: 24px;
+        font-weight: 300;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            font-size: 28px;
+            width: auto;
+            text-align: left;
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: inline-block;
+        display: flex;
+
+        li {
+            margin: 0 10px;
+            font-size: 30px;
+            background-color: #898989;
+            padding: 10px;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                text-decoration: none;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include transition(color, 300ms);
+
+                &:hover {
+                    color: $postTitleHoverColor;
+                }
+            }
+        }
+    }
+}
+
+div.commentsArea {
+    width: 100%;
+    margin-bottom: 100px;
+
+    h3.commentsTitle {
+        font-size: 24px;
+        font-weight: 400;
+        text-align: left;
+    }
+
+    nav.commentsNavigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        div {
+            a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: $postMetaColor;
+                @include transition(color, 300ms);
+
+                &:hover {
+                    color: $postMetaHoverColor;
+                }
+
+                span.sunset-chevron-left {
+                    margin-right: 10px;
+                }
+
+                span.sunset-chevron-right {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    ol {
+        list-style: none;
+
+        &.commentsList {
+            margin: 50px 0 0 0;
+            padding: 0;
+        }
+
+        li {
+            background-color: #efefef;
+            margin-bottom: 50px;
+            padding: 20px;
+            border-radius: 10px;
+
+            article {
+                padding: 0 0 50px 0;
+                &:last-child {
+                    padding: 0;
+                }
+
+                footer {
+                    display: flex;
+                    align-items: center;
+
+                    div.comment-author {
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            border-radius: 50%;
+                        }
+
+                        b {
+                            font-weight: 400;
+                            font-size: 20px;
+                            margin-left: 10px;
+                            text-transform: capitalize;
+
+                            a {
+                                color: inherit;
+                                @include transition(color, 300ms);
+
+                                &:hover {
+                                    color: $postTitleHoverColor;
+                                }
+                            }
+                        }
+
+                        span.says {
+                            display: none;
+                        }
+                    }
+
+                    div.comment-metadata {
+                        margin-left: 20px;
+                        a {
+                            font-size: 14px;
+                            color: $postMetaColor;
+                            @include transition(color, 300ms);
+                        
+                            &:hover {
+                                color: $postTitleHoverColor;
+                            }
+                        }
+
+                        span.edit-link {
+                            margin-left: 30px;
+                        }
+                    }
+                }
+
+                div.comment-content {
+                    p {
+                        color: rgb(88, 88, 88);
+                        letter-spacing: 0.02em;
+                        line-height: 1.6em;
+                    }
+                }
+
+                div.reply {
+                    a {
+                        color: $postMetaColor;
+                        @include transition(color, 300ms);
+                        
+                        &:hover {
+                            color: $postTitleHoverColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    div.comment-respond {
+        h3 {
+            font-size: 24px;
+            font-weight: 400;
+            text-align: left;
+        }
+
+        form {
+            width: 100%;
+
+            p.comment-notes {
+                color: $postMetaColor;
+            }
+
+            label {
+                width: 100%;
+                display: block;
+            }
+
+            input, textarea {
+                width: 100%;
+                padding: 8px;
+                border-radius: 3px;
+                border: 1px solid #bbb;
+            }
+
+            input[type=submit] {
+                width: auto;
+                cursor: pointer;
+                @include transition(background-color, 300ms);
+                font-size: 16px;
+
+                &:hover {
+                    background-color: #aaa;
+                }
+            }
+
+            textarea {
+                resize: vertical;
+            }
+        }
+    }
+}

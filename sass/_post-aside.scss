@@ -1,0 +1,86 @@
+article.sunsetAsidePostFormat {
+    div.asideContent {
+        background-color: rgba(0, 0, 0, 0.05);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        div.asideProPicContainer {
+            div.asideProPic {
+                width: 150px;
+                height: 150px;
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                border-radius: 50%;
+                margin-bottom: 20px;
+            }
+        }
+
+        div.asideMessage {
+            div.postMeta {
+                width: 100%;
+                text-align: center;
+            }
+
+            div.asideExcerpt {
+                width: 100%;
+                text-align: left;
+
+                p {
+                    font-size: 17px;
+                    font-weight: 300;
+                    line-height: 1.5em;
+                    letter-spacing: 0.02em;
+                    text-align: justify;
+                    color: $postExcerptColor;
+                    opacity: 0.7;
+
+                    a {
+                        text-decoration: none;
+                        color: $postExcerptColor;
+                        opacity: 0.7;
+                        font-weight: 500;
+                        @include transition(all, 300ms);
+
+                        &:hover {
+                            opacity: 1;
+                            color: $postMetaHoverColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer.postFooter {
+        margin: 0;
+        padding: 5px;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    article.sunsetAsidePostFormat {
+        div.asideContent {
+            flex-direction: row;
+
+            div.asideProPicContainer {
+                div.asideProPic {
+                    margin-bottom: 0;
+                }
+            }
+
+            div.asideMessage {
+                margin-left: 20px;
+
+                div.postMeta {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

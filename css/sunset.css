@@ -1,0 +1,1587 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Raleway:200,300,500");
+/*
+ *  Owl Carousel - Core
+ */
+.owl-carousel {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* position relative and z-index fix webkit rendering fonts issue */
+  position: relative;
+  z-index: 1;
+}
+.owl-carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+  touch-action: manipulation;
+  -moz-backface-visibility: hidden;
+  /* fix firefox animation glitch */
+}
+.owl-carousel .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.owl-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  /* fix for flashing background */
+  -webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+}
+.owl-carousel .owl-item {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+.owl-carousel .owl-item img {
+  display: block;
+  width: 100%;
+}
+.owl-carousel .owl-nav.disabled,
+.owl-carousel .owl-dots.disabled {
+  display: none;
+}
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next,
+.owl-carousel .owl-dot {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel button.owl-dot {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0 !important;
+  font: inherit;
+}
+.owl-carousel.owl-loaded {
+  display: block;
+}
+.owl-carousel.owl-loading {
+  opacity: 0;
+  display: block;
+}
+.owl-carousel.owl-hidden {
+  opacity: 0;
+}
+.owl-carousel.owl-refresh .owl-item {
+  visibility: hidden;
+}
+.owl-carousel.owl-drag .owl-item {
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.owl-carousel.owl-grab {
+  cursor: move;
+  cursor: grab;
+}
+.owl-carousel.owl-rtl {
+  direction: rtl;
+}
+.owl-carousel.owl-rtl .owl-item {
+  float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel {
+  display: block;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+article.sunsetImagePostFormat header.postHeader div.postMeta span, article.sunsetImagePostFormat header.postHeader div.postMeta a, article.sunsetImagePostFormat header.postHeader div.postMeta, article.sunsetImagePostFormat header.postHeader h2.postTitle a, header.pageHeader div.headerContent {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+article.sunsetImagePostFormat header.postHeader div.postExcerpt {
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 0.5) 100%);
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 0.5) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 0.5) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#00000000", endColorstr="#80000000",GradientType=0 );
+}
+
+@font-face {
+  font-family: "sunset-icon";
+  src: url("../fonts/sunset-icon.eot?2o7x2t");
+  src: url("../fonts/sunset-icon.eot?2o7x2t#iefix") format("embedded-opentype"), url("../fonts/sunset-icon.ttf?2o7x2t") format("truetype"), url("../fonts/sunset-icon.woff?2o7x2t") format("woff"), url("../fonts/sunset-icon.svg?2o7x2t#sunset-icon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.sunset-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "sunset-icon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sunset-googleplus:before {
+  content: "";
+}
+
+.sunset-facebook:before {
+  content: "";
+}
+
+.sunset-twitter:before {
+  content: "";
+}
+
+.sunset-mail:before {
+  content: "";
+}
+
+.sunset-audio:before {
+  content: "";
+}
+
+.sunset-chevron-left:before {
+  content: "";
+}
+
+.sunset-chevron-right:before {
+  content: "";
+}
+
+.sunset-close:before {
+  content: "";
+}
+
+.sunset-comment:before {
+  content: "";
+}
+
+.sunset-link:before {
+  content: "";
+}
+
+.sunset-loading:before {
+  content: "";
+}
+
+.sunset-logo:before {
+  content: "";
+}
+
+.sunset-menu:before {
+  content: "";
+}
+
+.sunset-pencil:before {
+  content: "";
+}
+
+.sunset-pics:before {
+  content: "";
+}
+
+.sunset-search:before {
+  content: "";
+}
+
+.sunset-share:before {
+  content: "";
+}
+
+.sunset-tag:before {
+  content: "";
+}
+
+.sunset-video:before {
+  content: "";
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body.noScroll {
+  overflow-y: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+.hide {
+  display: none;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 7px 10px;
+  border: 1px solid;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+.btnDefault {
+  color: #bbb;
+  background-color: transparent;
+  border-color: #bbb;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+.btnDefault:hover {
+  color: #464646;
+  border-color: #464646;
+}
+
+main.main {
+  width: 90%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  main.main {
+    width: 80%;
+  }
+}
+article {
+  padding-bottom: 80px;
+  padding-top: 20px;
+}
+
+h1.pageTitle {
+  color: #000;
+  font-size: 48px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0 0 50px 0;
+  padding: 0;
+  opacity: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  h1.pageTitle {
+    font-size: 58px;
+  }
+}
+h2.postTitle {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+h2.postTitle a {
+  display: inline-block;
+  color: #000;
+  font-size: 38px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0 0 20px 0;
+  padding: 0;
+  opacity: 1;
+  -webkit-transition: color 300ms ease;
+  -moz-transition: color 300ms ease;
+  -ms-transition: color 300ms ease;
+  -o-transition: color 300ms ease;
+  transition: color 300ms ease;
+}
+h2.postTitle a:hover {
+  color: #FEC159;
+}
+
+@media only screen and (min-width: 768px) {
+  h2.postTitle a {
+    font-size: 48px;
+  }
+}
+h2.postTitle {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #000;
+  font-size: 38px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0 0 20px 0;
+  padding: 0;
+  opacity: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  h2.postTitle {
+    font-size: 48px;
+  }
+}
+div.postMeta {
+  color: #898989;
+  text-align: center;
+}
+div.postMeta span {
+  font-size: 15px;
+  font-weight: 300;
+  color: #898989;
+}
+div.postMeta a {
+  font-size: 15px;
+  font-weight: 500;
+  color: #898989;
+  -webkit-transition: color 300ms ease;
+  -moz-transition: color 300ms ease;
+  -ms-transition: color 300ms ease;
+  -o-transition: color 300ms ease;
+  transition: color 300ms ease;
+}
+div.postMeta a:hover {
+  color: #FEC159;
+}
+
+footer.postFooter {
+  margin: 30px 0 0 0;
+  padding: 0 0 5px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 2px solid #eee;
+}
+footer.postFooter div.postTags a {
+  margin-right: 5px;
+}
+footer.postFooter span.sunset-icon {
+  margin-right: 10px;
+  font-size: 13px;
+  color: #898989;
+}
+footer.postFooter a {
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #898989;
+  -webkit-transition: color 300ms ease;
+  -moz-transition: color 300ms ease;
+  -ms-transition: color 300ms ease;
+  -o-transition: color 300ms ease;
+  transition: color 300ms ease;
+}
+footer.postFooter a:hover {
+  color: #FEC159;
+}
+
+div.primaryContainer main.main nav.pagination {
+  margin-bottom: 50px;
+  width: unset;
+  display: inline-block;
+}
+div.primaryContainer main.main nav.pagination div.nav-links {
+  margin: 0;
+  padding: 5px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+div.primaryContainer main.main nav.pagination div.nav-links span {
+  margin: 0;
+  padding: 5px;
+  border-right: 1px solid #ced4da;
+}
+div.primaryContainer main.main nav.pagination div.nav-links span:last-child {
+  border: none;
+}
+div.primaryContainer main.main nav.pagination div.nav-links a {
+  margin: 0;
+  padding: 5px;
+  border-right: 1px solid #ced4da;
+}
+div.primaryContainer main.main nav.pagination div.nav-links a:last-child {
+  border: none;
+}
+
+footer.pageFooter {
+  width: 100%;
+  padding: 50px;
+  background-color: #111;
+}
+footer.pageFooter p.footerCredit {
+  text-align: center;
+  color: #fff;
+  font-weight: 300;
+}
+
+header.pageHeader {
+  width: 100%;
+  height: 300px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 80px;
+}
+header.pageHeader div.headerContent {
+  width: 100%;
+  height: 250px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header.pageHeader div.headerContent h1.siteTitle {
+  margin: 0;
+  padding: 0;
+  font-size: 100px;
+  line-height: 1;
+}
+header.pageHeader div.headerContent h2.siteDescription {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0.5em 0 0 0;
+  padding: 0;
+}
+header.pageHeader nav.headerNav {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header.pageHeader nav.headerNav ul.headerNavLinks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header.pageHeader nav.headerNav ul.headerNavLinks li.current-menu-item a {
+  opacity: 1;
+}
+header.pageHeader nav.headerNav ul.headerNavLinks li.current-menu-item a:after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  bottom: -5px;
+  height: 2px;
+  background-color: #fff;
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+}
+header.pageHeader nav.headerNav ul.headerNavLinks li {
+  display: inline;
+  margin: 0 10px;
+}
+header.pageHeader nav.headerNav ul.headerNavLinks li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+  position: relative;
+  -webkit-transition: opacity 300ms ease;
+  -moz-transition: opacity 300ms ease;
+  -ms-transition: opacity 300ms ease;
+  -o-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+}
+header.pageHeader nav.headerNav ul.headerNavLinks li a:hover {
+  opacity: 1;
+}
+header.pageHeader nav.headerNav ul.headerNavLinks li a:hover:after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+}
+header.pageHeader nav.headerNav ul.headerNavLinks li a:after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  bottom: -5px;
+  height: 2px;
+  background-color: #fff;
+  opacity: 0;
+  -webkit-transition: opacity 300ms ease;
+  -moz-transition: opacity 300ms ease;
+  -ms-transition: opacity 300ms ease;
+  -o-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+  -webkit-transition: transform 300ms ease;
+  -moz-transition: transform 300ms ease;
+  -ms-transition: transform 300ms ease;
+  -o-transition: transform 300ms ease;
+  transition: transform 300ms ease;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -o-transform: translateY(10px);
+  transform: translateY(10px);
+}
+
+div.postTumbnail {
+  width: 100%;
+  height: 200px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 30px 0;
+}
+
+div.postExcerpt p {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+  text-align: justify;
+  color: #000;
+  opacity: 0.7;
+}
+
+div.postReadMore {
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  div.postTumbnail {
+    height: 500px;
+  }
+}
+article.sunsetImagePostFormat header.postHeader {
+  height: 300px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+article.sunsetImagePostFormat header.postHeader h2.postTitle a {
+  color: #fff;
+  padding-top: 20px;
+}
+article.sunsetImagePostFormat header.postHeader h2.postTitle a:hover {
+  color: #FEC159;
+}
+article.sunsetImagePostFormat header.postHeader div.postMeta {
+  color: #fff;
+}
+article.sunsetImagePostFormat header.postHeader div.postMeta span, article.sunsetImagePostFormat header.postHeader div.postMeta a {
+  color: #fff;
+}
+article.sunsetImagePostFormat header.postHeader div.postMeta a:hover {
+  color: #FEC159;
+}
+article.sunsetImagePostFormat header.postHeader div.postExcerpt {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+}
+article.sunsetImagePostFormat header.postHeader div.postExcerpt p {
+  text-align: center;
+  color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  article.sunsetImagePostFormat header.postHeader {
+    height: 500px;
+  }
+}
+article.sunsetAudioPostFormat header.postHeader {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 10px 0;
+}
+article.sunsetAudioPostFormat header.postHeader h2.postTitle {
+  margin: 0;
+  padding: 0;
+}
+article.sunsetAudioPostFormat header.postHeader h2.postTitle a {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  line-height: 1;
+  text-align: left;
+}
+article.sunsetAudioPostFormat header.postHeader div.postMeta {
+  align-self: unset;
+  text-align: left;
+}
+article.sunsetAudioPostFormat div.postContent iframe {
+  width: 100%;
+  height: 166px;
+}
+
+@media only screen and (min-width: 768px) {
+  article.sunsetAudioPostFormat header.postHeader {
+    flex-direction: row;
+  }
+  article.sunsetAudioPostFormat header.postHeader h2.postTitle {
+    max-width: 70%;
+  }
+  article.sunsetAudioPostFormat header.postHeader h2.postTitle a {
+    font-size: 30px;
+  }
+  article.sunsetAudioPostFormat header.postHeader div.postMeta {
+    align-self: flex-end;
+    margin-left: 30px;
+    max-width: 30%;
+  }
+}
+article.sunsetVideoPostFormat header.postHeader div.postVideo {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+}
+article.sunsetVideoPostFormat header.postHeader div.postVideo iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+article.sunsetVideoPostFormat header.postHeader h2.postTitle {
+  margin-top: 20px;
+}
+
+article.sunsetGalleryPostFormat header.postHeader div.postGallery {
+  width: 100%;
+}
+article.sunsetGalleryPostFormat header.postHeader div.postGallery div.owl-carousel {
+  width: 100%;
+  position: relative;
+}
+article.sunsetGalleryPostFormat header.postHeader div.postGallery div.owl-carousel div.image {
+  width: 100%;
+  height: 300px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+article.sunsetGalleryPostFormat header.postHeader div.postGallery div.owl-carousel div.owl-nav {
+  width: 100%;
+  height: 41px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -20px;
+}
+article.sunsetGalleryPostFormat header.postHeader div.postGallery div.owl-carousel div.owl-nav button {
+  position: absolute;
+  outline: none;
+  height: 41px;
+}
+article.sunsetGalleryPostFormat header.postHeader div.postGallery div.owl-carousel div.owl-nav button span {
+  color: #fff;
+  opacity: 0.5;
+  font-size: 40px;
+  line-height: 0;
+  -webkit-transition: opacity 300ms ease;
+  -moz-transition: opacity 300ms ease;
+  -ms-transition: opacity 300ms ease;
+  -o-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+}
+article.sunsetGalleryPostFormat header.postHeader div.postGallery div.owl-carousel div.owl-nav button span:hover {
+  opacity: 1;
+}
+article.sunsetGalleryPostFormat header.postHeader div.postGallery div.owl-carousel div.owl-nav button.owl-prev {
+  left: 5px;
+}
+article.sunsetGalleryPostFormat header.postHeader div.postGallery div.owl-carousel div.owl-nav button.owl-next {
+  right: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  article.sunsetGalleryPostFormat header.postHeader div.postGallery div.owl-carousel div.image {
+    height: 500px;
+  }
+}
+article.sunsetQuotePostFormat header.postHeader {
+  max-width: 800px;
+  margin: 0 auto;
+}
+article.sunsetQuotePostFormat header.postHeader h2.quoteContent {
+  color: #000;
+  display: block;
+  font-size: 38px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0 0 20px 0;
+  padding: 0;
+  opacity: 1;
+}
+article.sunsetQuotePostFormat header.postHeader h3.quoteAuthor {
+  color: #000;
+  display: block;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0;
+  padding: 0 0 20px 0;
+  opacity: 0.5;
+}
+
+@media only screen and (min-width: 768px) {
+  article.sunsetQuotePostFormat header.postHeader h2.quoteContent {
+    font-size: 48px;
+  }
+}
+article.sunsetLinkPostFormat header.postHeader div.link {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+article.sunsetLinkPostFormat header.postHeader div.link span {
+  font-size: 30px;
+  color: #fff;
+  -webkit-transition: color 300ms ease;
+  -moz-transition: color 300ms ease;
+  -ms-transition: color 300ms ease;
+  -o-transition: color 300ms ease;
+  transition: color 300ms ease;
+}
+article.sunsetLinkPostFormat header.postHeader div.link:hover span {
+  color: #FEC159;
+}
+
+article.sunsetAsidePostFormat div.asideContent {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+article.sunsetAsidePostFormat div.asideContent div.asideProPicContainer div.asideProPic {
+  width: 150px;
+  height: 150px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+article.sunsetAsidePostFormat div.asideContent div.asideMessage div.postMeta {
+  width: 100%;
+  text-align: center;
+}
+article.sunsetAsidePostFormat div.asideContent div.asideMessage div.asideExcerpt {
+  width: 100%;
+  text-align: left;
+}
+article.sunsetAsidePostFormat div.asideContent div.asideMessage div.asideExcerpt p {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+  text-align: justify;
+  color: #000;
+  opacity: 0.7;
+}
+article.sunsetAsidePostFormat div.asideContent div.asideMessage div.asideExcerpt p a {
+  text-decoration: none;
+  color: #000;
+  opacity: 0.7;
+  font-weight: 500;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+article.sunsetAsidePostFormat div.asideContent div.asideMessage div.asideExcerpt p a:hover {
+  opacity: 1;
+  color: #FEC159;
+}
+article.sunsetAsidePostFormat footer.postFooter {
+  margin: 0;
+  padding: 5px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (min-width: 768px) {
+  article.sunsetAsidePostFormat div.asideContent {
+    flex-direction: row;
+  }
+  article.sunsetAsidePostFormat div.asideContent div.asideProPicContainer div.asideProPic {
+    margin-bottom: 0;
+  }
+  article.sunsetAsidePostFormat div.asideContent div.asideMessage {
+    margin-left: 20px;
+  }
+  article.sunsetAsidePostFormat div.asideContent div.asideMessage div.postMeta {
+    text-align: left;
+  }
+}
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%;
+  /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center;
+}
+
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+  background-color: #eee;
+  clip: auto !important;
+  clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+div.postVideo {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+}
+div.postVideo iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+div.postVideoContent {
+  width: 100%;
+}
+div.postVideoContent iframe {
+  height: 200px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  div.postVideoContent iframe {
+    height: 500px;
+  }
+}
+
+div.postContentContainer div.postContent p {
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  line-height: 1.6em;
+  color: #898989;
+  font-weight: 400;
+}
+
+div.sunsetShareThis {
+  border-top: 2px solid #eee;
+  margin-top: 50px;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  div.sunsetShareThis {
+    justify-content: unset;
+  }
+}
+div.sunsetShareThis h4 {
+  font-size: 24px;
+  font-weight: 300;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  div.sunsetShareThis h4 {
+    font-size: 28px;
+    width: auto;
+    text-align: left;
+  }
+}
+div.sunsetShareThis ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+  display: flex;
+}
+div.sunsetShareThis ul li {
+  margin: 0 10px;
+  font-size: 30px;
+  background-color: #898989;
+  padding: 10px;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.sunsetShareThis ul li a {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: color 300ms ease;
+  -moz-transition: color 300ms ease;
+  -ms-transition: color 300ms ease;
+  -o-transition: color 300ms ease;
+  transition: color 300ms ease;
+}
+div.sunsetShareThis ul li a:hover {
+  color: #FEC159;
+}
+
+div.commentsArea {
+  width: 100%;
+  margin-bottom: 100px;
+}
+div.commentsArea h3.commentsTitle {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: left;
+}
+div.commentsArea nav.commentsNavigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.commentsArea nav.commentsNavigation div a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #898989;
+  -webkit-transition: color 300ms ease;
+  -moz-transition: color 300ms ease;
+  -ms-transition: color 300ms ease;
+  -o-transition: color 300ms ease;
+  transition: color 300ms ease;
+}
+div.commentsArea nav.commentsNavigation div a:hover {
+  color: #FEC159;
+}
+div.commentsArea nav.commentsNavigation div a span.sunset-chevron-left {
+  margin-right: 10px;
+}
+div.commentsArea nav.commentsNavigation div a span.sunset-chevron-right {
+  margin-left: 10px;
+}
+div.commentsArea ol {
+  list-style: none;
+}
+div.commentsArea ol.commentsList {
+  margin: 50px 0 0 0;
+  padding: 0;
+}
+div.commentsArea ol li {
+  background-color: #efefef;
+  margin-bottom: 50px;
+  padding: 20px;
+  border-radius: 10px;
+}
+div.commentsArea ol li article {
+  padding: 0 0 50px 0;
+}
+div.commentsArea ol li article:last-child {
+  padding: 0;
+}
+div.commentsArea ol li article footer {
+  display: flex;
+  align-items: center;
+}
+div.commentsArea ol li article footer div.comment-author {
+  display: flex;
+  align-items: center;
+}
+div.commentsArea ol li article footer div.comment-author img {
+  border-radius: 50%;
+}
+div.commentsArea ol li article footer div.comment-author b {
+  font-weight: 400;
+  font-size: 20px;
+  margin-left: 10px;
+  text-transform: capitalize;
+}
+div.commentsArea ol li article footer div.comment-author b a {
+  color: inherit;
+  -webkit-transition: color 300ms ease;
+  -moz-transition: color 300ms ease;
+  -ms-transition: color 300ms ease;
+  -o-transition: color 300ms ease;
+  transition: color 300ms ease;
+}
+div.commentsArea ol li article footer div.comment-author b a:hover {
+  color: #FEC159;
+}
+div.commentsArea ol li article footer div.comment-author span.says {
+  display: none;
+}
+div.commentsArea ol li article footer div.comment-metadata {
+  margin-left: 20px;
+}
+div.commentsArea ol li article footer div.comment-metadata a {
+  font-size: 14px;
+  color: #898989;
+  -webkit-transition: color 300ms ease;
+  -moz-transition: color 300ms ease;
+  -ms-transition: color 300ms ease;
+  -o-transition: color 300ms ease;
+  transition: color 300ms ease;
+}
+div.commentsArea ol li article footer div.comment-metadata a:hover {
+  color: #FEC159;
+}
+div.commentsArea ol li article footer div.comment-metadata span.edit-link {
+  margin-left: 30px;
+}
+div.commentsArea ol li article div.comment-content p {
+  color: #585858;
+  letter-spacing: 0.02em;
+  line-height: 1.6em;
+}
+div.commentsArea ol li article div.reply a {
+  color: #898989;
+  -webkit-transition: color 300ms ease;
+  -moz-transition: color 300ms ease;
+  -ms-transition: color 300ms ease;
+  -o-transition: color 300ms ease;
+  transition: color 300ms ease;
+}
+div.commentsArea ol li article div.reply a:hover {
+  color: #FEC159;
+}
+div.commentsArea div.comment-respond h3 {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: left;
+}
+div.commentsArea div.comment-respond form {
+  width: 100%;
+}
+div.commentsArea div.comment-respond form p.comment-notes {
+  color: #898989;
+}
+div.commentsArea div.comment-respond form label {
+  width: 100%;
+  display: block;
+}
+div.commentsArea div.comment-respond form input, div.commentsArea div.comment-respond form textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid #bbb;
+}
+div.commentsArea div.comment-respond form input[type=submit] {
+  width: auto;
+  cursor: pointer;
+  -webkit-transition: background-color 300ms ease;
+  -moz-transition: background-color 300ms ease;
+  -ms-transition: background-color 300ms ease;
+  -o-transition: background-color 300ms ease;
+  transition: background-color 300ms ease;
+  font-size: 16px;
+}
+div.commentsArea div.comment-respond form input[type=submit]:hover {
+  background-color: #aaa;
+}
+div.commentsArea div.comment-respond form textarea {
+  resize: vertical;
+}
+
+a.sidebarOpen {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  color: #fff;
+  -webkit-transition: color 300ms ease;
+  -moz-transition: color 300ms ease;
+  -ms-transition: color 300ms ease;
+  -o-transition: color 300ms ease;
+  transition: color 300ms ease;
+}
+a.sidebarOpen:hover {
+  color: #FEC159;
+}
+
+div.sunsetSidebar {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1f1f1f;
+  color: #fff;
+  width: 100%;
+  max-width: 280px;
+  height: 100vh;
+  -webkit-transition: transform 500ms ease;
+  -moz-transition: transform 500ms ease;
+  -ms-transition: transform 500ms ease;
+  -o-transition: transform 500ms ease;
+  transition: transform 500ms ease;
+}
+div.sunsetSidebar.sidebarClosed {
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+}
+div.sunsetSidebar div.sunsetSidebarContainer {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  padding-top: 40px;
+}
+div.sunsetSidebar div.sunsetSidebarContainer a.sidebarClose {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  color: #fff;
+  -webkit-transition: color 300ms ease;
+  -moz-transition: color 300ms ease;
+  -ms-transition: color 300ms ease;
+  -o-transition: color 300ms ease;
+  transition: color 300ms ease;
+}
+div.sunsetSidebar div.sunsetSidebarContainer a.sidebarClose:hover {
+  color: #FEC159;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.sunsetWidget {
+  padding: 20px;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.sunsetWidget h2.sunsetWidgetTitle {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  text-align: center;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.sunsetWidget ul {
+  list-style: none;
+  padding: 0 10px;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.sunsetWidget ul li {
+  margin: 10px 0;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.sunsetWidget ul li a {
+  color: #fff;
+  font-weight: 300;
+  -webkit-transition: color 300ms ease;
+  -moz-transition: color 300ms ease;
+  -ms-transition: color 300ms ease;
+  -o-transition: color 300ms ease;
+  transition: color 300ms ease;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.sunsetWidget ul li a:hover {
+  color: #FEC159;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.sunsetProfileWidget div.sunsetProPicContainer div.sunsetProPicPrev {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.sunsetProfileWidget h2.sunsetAuthorName {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.sunsetProfileWidget h3.sunsetDescription {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 0;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.sunsetProfileWidget div.socialMedia {
+  text-align: center;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.sunsetProfileWidget div.socialMedia a {
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: color 300ms ease;
+  -moz-transition: color 300ms ease;
+  -ms-transition: color 300ms ease;
+  -o-transition: color 300ms ease;
+  transition: color 300ms ease;
+  font-size: 24px;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.sunsetProfileWidget div.socialMedia a:hover {
+  color: #FEC159;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.sunsetProfileWidget hr {
+  height: 1px;
+  border: none;
+  border-radius: 0.5px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-top: 40px;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.widget_tag_cloud div.tagcloud {
+  text-align: center;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.widget_tag_cloud div.tagcloud a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 5px 8px;
+  margin: 3px 0;
+  border-radius: 10px;
+  -webkit-transition: color 300ms ease;
+  -moz-transition: color 300ms ease;
+  -ms-transition: color 300ms ease;
+  -o-transition: color 300ms ease;
+  transition: color 300ms ease;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.widget_tag_cloud div.tagcloud a:hover {
+  color: #FEC159;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.widget_categories ul li.cat-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.widget_categories ul li.cat-item span {
+  position: absolute;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 25px;
+  height: 25px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.widget_recent_comments ul li.recentcomments {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0;
+  padding: 10px 0;
+  font-size: 16px;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.widget_recent_comments ul li.recentcomments:last-child {
+  border: none;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.widget_recent_comments ul li.recentcomments span.comment-author-link {
+  text-transform: capitalize;
+  display: block;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.widget_recent_comments ul li.recentcomments :not(span) {
+  font-size: 14px;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.sunset-popular-posts-widget div.media {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.sunset-popular-posts-widget div.media:last-child {
+  margin-bottom: 0;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.sunset-popular-posts-widget div.media div.media-left {
+  margin: 0 10px;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.sunset-popular-posts-widget div.media div.media-body a {
+  color: #fff;
+  font-weight: 300;
+  -webkit-transition: color 300ms ease;
+  -moz-transition: color 300ms ease;
+  -ms-transition: color 300ms ease;
+  -o-transition: color 300ms ease;
+  transition: color 300ms ease;
+}
+div.sunsetSidebar div.sunsetSidebarContainer div.sidebarScroll aside#sunsetRightSidebar section.sunset-popular-posts-widget div.media div.media-body a:hover {
+  color: #FEC159;
+}
+
+div.sidebarOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 90;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+form.sunsetContactForm {
+  width: 100%;
+  max-width: 800px;
+  margin: 100px auto 20px auto;
+  padding: 0;
+}
+form.sunsetContactForm input, form.sunsetContactForm textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid #d0d0d0;
+  margin-bottom: 20px;
+  padding: 5px;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+form.sunsetContactForm input.txtError, form.sunsetContactForm textarea.txtError {
+  border-color: #ff0000;
+  outline-color: rgba(255, 0, 0, 0.3);
+  box-shadow: 0px 0px 2px rgba(255, 0, 0, 0.3);
+}
+form.sunsetContactForm input.txtError::-webkit-input-placeholder, form.sunsetContactForm textarea.txtError::-webkit-input-placeholder {
+  color: #ff0000;
+}
+form.sunsetContactForm input.txtError::-moz-placeholder, form.sunsetContactForm textarea.txtError::-moz-placeholder {
+  color: #ff0000;
+}
+form.sunsetContactForm input.txtError:-ms-placeholder, form.sunsetContactForm textarea.txtError:-ms-placeholder {
+  color: #ff0000;
+}
+form.sunsetContactForm input.txtError:-moz-placeholder, form.sunsetContactForm textarea.txtError:-moz-placeholder {
+  color: #ff0000;
+}
+form.sunsetContactForm textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+form.sunsetContactForm span.info {
+  display: none;
+}
+form.sunsetContactForm span.success {
+  display: block;
+  text-align: center;
+  padding: 20px 0 0 0;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: #00ff00;
+}
+form.sunsetContactForm span.process {
+  display: block;
+  text-align: center;
+  padding: 20px 0 0 0;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: #0000ff;
+}
+form.sunsetContactForm span.error {
+  display: block;
+  text-align: center;
+  padding: 20px 0 0 0;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: #ff0000;
+}
+form.sunsetContactForm button {
+  display: block;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  font-size: 18px;
+  color: #ffffff;
+  margin: 30px auto 0 auto;
+  padding: 10px 15px;
+  background-color: #666666;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: background-color 300ms ease;
+  -moz-transition: background-color 300ms ease;
+  -ms-transition: background-color 300ms ease;
+  -o-transition: background-color 300ms ease;
+  transition: background-color 300ms ease;
+}
+form.sunsetContactForm button:hover {
+  background-color: #444444;
+}
+form.sunsetContactForm button:disabled,
+form.sunsetContactForm input:disabled,
+form.sunsetContactForm textarea:disabled {
+  cursor: wait;
+}
+form.sunsetContactForm button:disabled:hover {
+  background-color: #666666;
+}
+
+/*# sourceMappingURL=sunset.css.map */

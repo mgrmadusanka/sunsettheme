@@ -1,0 +1,21 @@
+article.sunsetVideoPostFormat {
+    header.postHeader {
+        div.postVideo {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+
+            iframe {
+                position: absolute;
+	            top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        h2.postTitle {
+            margin-top: 20px;
+        }
+    }
+}

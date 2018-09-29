@@ -1,0 +1,124 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?2o7x2t');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?2o7x2t#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?2o7x2t') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?2o7x2t') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?2o7x2t##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.sunset-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sunset-googleplus {
+  &:before {
+    content: $sunset-googleplus; 
+  }
+}
+.sunset-facebook {
+  &:before {
+    content: $sunset-facebook; 
+  }
+}
+.sunset-twitter {
+  &:before {
+    content: $sunset-twitter; 
+  }
+}
+.sunset-mail {
+  &:before {
+    content: $sunset-mail; 
+  }
+}
+.sunset-audio {
+  &:before {
+    content: $sunset-audio; 
+  }
+}
+.sunset-chevron-left {
+  &:before {
+    content: $sunset-chevron-left; 
+  }
+}
+.sunset-chevron-right {
+  &:before {
+    content: $sunset-chevron-right; 
+  }
+}
+.sunset-close {
+  &:before {
+    content: $sunset-close; 
+  }
+}
+.sunset-comment {
+  &:before {
+    content: $sunset-comment; 
+  }
+}
+.sunset-link {
+  &:before {
+    content: $sunset-link; 
+  }
+}
+.sunset-loading {
+  &:before {
+    content: $sunset-loading; 
+  }
+}
+.sunset-logo {
+  &:before {
+    content: $sunset-logo; 
+  }
+}
+.sunset-menu {
+  &:before {
+    content: $sunset-menu; 
+  }
+}
+.sunset-pencil {
+  &:before {
+    content: $sunset-pencil; 
+  }
+}
+.sunset-pics {
+  &:before {
+    content: $sunset-pics; 
+  }
+}
+.sunset-search {
+  &:before {
+    content: $sunset-search; 
+  }
+}
+.sunset-share {
+  &:before {
+    content: $sunset-share; 
+  }
+}
+.sunset-tag {
+  &:before {
+    content: $sunset-tag; 
+  }
+}
+.sunset-video {
+  &:before {
+    content: $sunset-video; 
+  }
+}
+

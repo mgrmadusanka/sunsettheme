@@ -1,0 +1,59 @@
+article.sunsetImagePostFormat {
+    header.postHeader {
+        height: 300px;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+
+        h2.postTitle {
+            a {
+                @extend %textShadow;
+                color: #fff;
+                padding-top: 20px;
+
+                &:hover {
+                    color: $postTitleHoverColor;
+                }
+            }
+        }
+
+        div.postMeta {
+            @extend %textShadow;
+            color: #fff;
+
+            span, a {
+                @extend %textShadow;
+                color: #fff;
+            }
+
+            a {
+                &:hover {
+                    color: $postMetaHoverColor;
+                }
+            }
+        }
+
+        div.postExcerpt {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 30px;
+            @extend %backgroundGradiant;
+
+            p {
+                text-align: center;
+                color: #fff;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    article.sunsetImagePostFormat {
+        header.postHeader {
+            height: 500px;
+        }
+    }
+}
